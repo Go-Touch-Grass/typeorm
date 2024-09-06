@@ -14,4 +14,10 @@
 1. `npm init -y`
 2. `npm install express @types/express pg ts-node typeorm typescript`
 
-    Likely have to do this after pulling from this repo.
+    *Likely have to do this after pulling from this repo.
+
+## GitHub Authentication Setup
+
+1. Go to this [link](https://github.com/settings/tokens) and generate a personal access token (classic). (I checked all the boxes)
+2. In the Visual Studio Code terminal, `git remote set-url origin https://<personal_access_token>@github.com/<your_username or organization_name>/<repo_name>.git`
+3. Now you can try `git push`

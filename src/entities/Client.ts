@@ -1,7 +1,8 @@
-import { Column, CreateDateColumn, Entity, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, OneToMany, UpdateDateColumn } from "typeorm";
 import { Person } from "./utils/Person";
+import { Transaction } from "./Transaction";
 
-@Entity('client')
+@Entity("client")
 export class Client extends Person {
     @Column({
         type: "numeric"
@@ -28,6 +29,12 @@ export class Client extends Person {
         default: []
     })
     family_members: string[];
+
+    @OneToMany(
+        () => Transaction,
+        transaction => transaction.client
+    )
+    transactions: Transaction[];
 
     @CreateDateColumn()
     created_at: Date;

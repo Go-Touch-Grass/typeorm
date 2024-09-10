@@ -1,8 +1,8 @@
-import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryColumn, UpdateDateColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Person extends BaseEntity {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
@@ -21,9 +21,4 @@ export class Person extends BaseEntity {
         length: 10
     })
     card_number: string;
-
-    @Column({
-        type: "numeric"
-    })
-    balance: number;
 }

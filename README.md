@@ -16,6 +16,9 @@
 
     *Likely have to do this after pulling from this repo.
 
+3. `npm install nodemon -g`
+4. `npm install dotenv`
+
 ## GitHub Authentication Setup
 
 1. Go to this [link](https://github.com/settings/tokens) and generate a personal access token (classic). (I checked all the boxes)
